@@ -1,0 +1,25 @@
+---
+- name: Pull and Run docker image of sportitup
+  hosts: all
+  tasks:
+    
+    - name: Remove Previous Docker Images If Exists 
+      shell:
+        cmd: docker rmi nihar01/sportitup-frontend  nihar01/sportitup  2> /dev/null || true
+    
+    - name: Pull nihar01/sportitup-frontend 
+      docker_image:
+        name: nihar01/sportitup-frontend 
+        source: pull
+       
+    - name: Pull nihar01/sportitup
+      docker_image:
+        name: nihar01/sportitup
+        source: pull 
+    
+    - name: Copy docker-compose.yml file to remote machine
+      become: true
+      copy: 
+        src:  docker-compose.yml 
+        dest: /usr/local
+         

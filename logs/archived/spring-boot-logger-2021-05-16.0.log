@@ -1,0 +1,12 @@
+2021-05-15 15:36:15,388 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8081-exec-1] Completed initialization in 1 ms
+2021-05-15 15:36:15,531 INFO com.iiitb.sportitup.controller.UserController [http-nio-8081-exec-2] [Login by user with id] - 1
+2021-05-15 15:36:26,669 INFO com.iiitb.sportitup.controller.ActivityController [http-nio-8081-exec-7] [User joined the activity] - 17
+2021-05-15 16:30:48,872 INFO com.iiitb.sportitup.controller.UserController [http-nio-8081-exec-2] [Login by user with id] - 1
+2021-05-15 16:31:07,382 INFO com.iiitb.sportitup.service.BookingService [http-nio-8081-exec-7] [New Booking Created with id] - 29
+2021-05-15 16:31:34,314 INFO com.iiitb.sportitup.service.ActivityService [http-nio-8081-exec-7] [New Activity Created with id] - 30
+2021-05-15 16:32:03,421 INFO com.iiitb.sportitup.controller.ActivityController [http-nio-8081-exec-10] [User joined the activity] - 23
+2021-05-15 16:32:05,424 INFO com.iiitb.sportitup.controller.ActivityController [http-nio-8081-exec-2] [User joined the activity] - 23
+2021-05-15 16:32:53,462 INFO com.iiitb.sportitup.controller.UserController [http-nio-8081-exec-2] [New user created with id] - 31
+2021-05-15 16:33:42,772 INFO com.iiitb.sportitup.controller.UserController [http-nio-8081-exec-4] [New user created with id] - 32
+2021-05-15 16:33:50,351 INFO com.iiitb.sportitup.controller.UserController [http-nio-8081-exec-6] [Login by user with id] - 32
+2021-05-15 16:38:11,530 INFO com.iiitb.sportitup.controller.VenueController [http-nio-8081-exec-4] [Venue created with venueId] - 5

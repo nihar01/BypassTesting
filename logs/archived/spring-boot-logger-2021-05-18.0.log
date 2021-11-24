@@ -1,0 +1,27 @@
+2021-05-18 16:14:38,283 INFO org.springframework.boot.StartupInfoLogger [main] Starting SportitupApplicationTests using Java 11.0.11 on ubuntu2020 with PID 8192 (started by nihar in /home/nihar/Desktop/SportItUp-Application)
+2021-05-18 16:14:38,288 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-05-18 16:14:38,835 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-18 16:14:38,884 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 42 ms. Found 5 JPA repository interfaces.
+2021-05-18 16:14:39,656 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 0 (http)
+2021-05-18 16:14:39,674 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-auto-1"]
+2021-05-18 16:14:39,676 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-05-18 16:14:39,677 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-05-18 16:14:39,755 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-05-18 16:14:39,756 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1447 ms
+2021-05-18 16:14:39,987 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-18 16:14:40,065 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-05-18 16:14:40,186 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-18 16:14:40,276 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-05-18 16:14:40,609 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-05-18 16:14:40,626 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-05-18 16:14:41,397 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-18 16:14:41,408 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-18 16:14:41,838 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-18 16:14:42,008 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-18 16:14:42,301 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-auto-1"]
+2021-05-18 16:14:42,313 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 38229 (http) with context path ''
+2021-05-18 16:14:42,321 INFO org.springframework.boot.StartupInfoLogger [main] Started SportitupApplicationTests in 4.385 seconds (JVM running for 5.206)
+2021-05-18 16:14:42,679 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-18 16:14:42,682 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-18 16:14:42,685 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2021-05-18 16:14:42,694 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.

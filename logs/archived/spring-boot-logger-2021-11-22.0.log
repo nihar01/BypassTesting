@@ -1,0 +1,36 @@
+2021-11-22 14:38:49,884 INFO org.springframework.boot.StartupInfoLogger [main] Starting SportitupApplication using Java 11.0.11 on ubuntu2020 with PID 8884 (/home/nihar/Music/SportItUp-Application/target/classes started by nihar in /home/nihar/Music/SportItUp-Application)
+2021-11-22 14:38:49,888 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-11-22 14:38:50,715 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-22 14:38:50,796 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 68 ms. Found 5 JPA repository interfaces.
+2021-11-22 14:38:51,390 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8081 (http)
+2021-11-22 14:38:51,399 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8081"]
+2021-11-22 14:38:51,399 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-11-22 14:38:51,400 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-11-22 14:38:51,485 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-11-22 14:38:51,486 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1538 ms
+2021-11-22 14:38:51,705 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-22 14:38:51,766 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-11-22 14:38:51,878 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-22 14:38:51,972 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-11-22 14:38:52,652 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-11-22 14:38:52,666 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-22 14:38:53,529 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-22 14:38:53,537 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-22 14:38:54,100 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-22 14:38:54,204 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-22 14:38:54,466 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8081"]
+2021-11-22 14:38:54,480 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8081 (http) with context path ''
+2021-11-22 14:38:54,494 INFO org.springframework.boot.StartupInfoLogger [main] Started SportitupApplication in 5.309 seconds (JVM running for 6.064)
+2021-11-22 14:40:54,646 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-22 14:40:54,647 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8081-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-11-22 14:40:54,648 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8081-exec-1] Completed initialization in 1 ms
+2021-11-22 14:40:54,748 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8081-exec-2] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String "9915234558": Overflow: numeric value (9915234558) out of range of Integer (-2147483648 - 2147483647); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.lang.Integer` from String "9915234558": Overflow: numeric value (9915234558) out of range of Integer (-2147483648 - 2147483647)
+ at [Source: (PushbackInputStream); line: 1, column: 86] (through reference chain: com.iiitb.sportitup.bean.User["contactNumber"])]
+2021-11-22 14:41:04,649 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8081-exec-3] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String "9915234558": Overflow: numeric value (9915234558) out of range of Integer (-2147483648 - 2147483647); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.lang.Integer` from String "9915234558": Overflow: numeric value (9915234558) out of range of Integer (-2147483648 - 2147483647)
+ at [Source: (PushbackInputStream); line: 1, column: 86] (through reference chain: com.iiitb.sportitup.bean.User["contactNumber"])]
+2021-11-22 14:41:18,940 INFO com.iiitb.sportitup.controller.UserController [http-nio-8081-exec-5] [Login by user with id] - 1
+2021-11-22 14:42:17,554 INFO com.iiitb.sportitup.controller.ActivityController [http-nio-8081-exec-7] [User joined the activity] - 43
+2021-11-22 14:58:17,823 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-22 14:58:17,825 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-22 14:58:17,831 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2021-11-22 14:58:17,842 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.

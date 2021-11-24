@@ -1,0 +1,30 @@
+2021-07-20 18:46:42,270 INFO org.springframework.boot.StartupInfoLogger [main] Starting SportitupApplication using Java 11.0.11 on ubuntu2020 with PID 7827 (/home/nihar/Music/SportItUp-Application/target/classes started by nihar in /home/nihar/Music/SportItUp-Application)
+2021-07-20 18:46:42,275 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-07-20 18:46:43,057 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-07-20 18:46:43,136 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 61 ms. Found 5 JPA repository interfaces.
+2021-07-20 18:46:43,639 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8081 (http)
+2021-07-20 18:46:43,650 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8081"]
+2021-07-20 18:46:43,651 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-07-20 18:46:43,652 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-07-20 18:46:43,754 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-07-20 18:46:43,754 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1423 ms
+2021-07-20 18:46:43,968 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-07-20 18:46:44,014 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-07-20 18:46:44,133 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-20 18:46:44,227 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-07-20 18:46:44,657 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-07-20 18:46:44,673 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-07-20 18:46:45,543 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-20 18:46:45,553 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-07-20 18:46:46,072 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-07-20 18:46:46,189 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-07-20 18:46:46,450 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8081"]
+2021-07-20 18:46:46,465 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8081 (http) with context path ''
+2021-07-20 18:46:46,477 INFO org.springframework.boot.StartupInfoLogger [main] Started SportitupApplication in 4.913 seconds (JVM running for 5.471)
+2021-07-20 18:47:01,650 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-20 18:47:01,651 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8081-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-07-20 18:47:01,653 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8081-exec-1] Completed initialization in 1 ms
+2021-07-20 18:49:31,303 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-07-20 18:49:31,304 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-07-20 18:49:31,306 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2021-07-20 18:49:31,314 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
