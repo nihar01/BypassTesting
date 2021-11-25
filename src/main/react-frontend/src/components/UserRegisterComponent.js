@@ -142,7 +142,7 @@ class  UserRegisterComponent extends Component {
                                         </div>
                                         <div className = "form-group">
                                             <label> Password: </label>
-                                            <input placeholder="Password" name="password" type="password"  className="form-control" 
+                                            <input placeholder="Password" name="password" type="password"  className="form-control" minLength={8}
                                                 value={this.state.password} onChange={this.changePasswordHandler}/>
                                         </div>
 
