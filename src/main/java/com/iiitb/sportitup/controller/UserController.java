@@ -41,7 +41,7 @@ public class UserController {
         String regex_firstName="[A-Za-z]+";
         String regex_email = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+(?:\\.[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$";
         String regex_lastName="[A-Za-z]+";
-        String regex_contactNumber="^\\\\d{10}$";
+        String regex_contactNumber="^\\d{10}$";
         String regex_password="\"^(?=.*[0-9])\"\n" +
                 "                + \"(?=.*[a-z])(?=.*[A-Z])\"\n" +
                 "                + \"(?=.*[@#$%^&+=])\"\n" +
@@ -56,7 +56,7 @@ public class UserController {
         System.out.println("LastName check ->" +" : "+ matcher_lastName.matches());
 
         Pattern pattern_email= Pattern.compile(regex_email);
-        Matcher matcher_email= pattern_lastName.matcher(user.getEmailId());
+        Matcher matcher_email= pattern_email.matcher(user.getEmailId());
         System.out.println("Email check ->" +" : "+ matcher_email.matches());
 
         Pattern pattern_contactNumber= Pattern.compile(regex_contactNumber);
@@ -107,7 +107,7 @@ public class UserController {
 
         Pattern pattern_email = Pattern.compile(regex_email);
         Matcher matcher_email = pattern_email.matcher(user.getEmailId());
-        System.out.println("Login password check ->" +" : "+ matcher_email.matches());
+        System.out.println("Login email check ->" +" : "+ matcher_email.matches());
 
         String regex_password ="^(?=.*[0-9])"
                 + "(?=.*[a-z])(?=.*[A-Z])"
@@ -116,7 +116,7 @@ public class UserController {
 
         Pattern pattern_password = Pattern.compile(regex_password);
          Matcher matcher_password = pattern_password.matcher(user.getPassword());
-        System.out.println("Login email id check ->" +" : "+ matcher_password.matches());
+        System.out.println("Login password id check ->" +" : "+ matcher_password.matches());
 
 
 //        System.out.println("Login Password check -> "
