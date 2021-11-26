@@ -3,17 +3,17 @@ import UserService from '../services/UserService'
 class UserSignInComponent extends Component {
 
     loginInputRef = React.createRef();
-    handleFormSubmit(e) {
-        e.preventDefault();
-        const loggedIn = this.state.loggedIn;
-        console.log(loggedIn)
-        console.log(this.state.loggedIn)
+    // handleFormSubmit(e) {
+    //     e.preventDefault();
+    //     const loggedIn = this.state.loggedIn;
+    //     console.log(loggedIn)
+    //     console.log(this.state.loggedIn)
         
-        this.props.handleLogin(loggedIn);
+    //     this.props.handleLogin(loggedIn);
         
-      }
+    //   }
 
-      handleFormSubmit = this.handleFormSubmit.bind(this);
+    //   handleFormSubmit = this.handleFormSubmit.bind(this);
 
 
     constructor(props) {
@@ -47,6 +47,8 @@ class UserSignInComponent extends Component {
 
     validateSignIn(e)
     {
+   
+
         e.preventDefault();
 
         let user = {
@@ -85,12 +87,26 @@ class UserSignInComponent extends Component {
                 }
                 
                 console.log(this.state.loggedIn);
-                alert("Login Successful");
+                // alert("Login Successful");
+
+                
+                    // e.preventDefault();
+                    const loggedIn = this.state.loggedIn;
+                    console.log(loggedIn)
+                    console.log(this.state.loggedIn)
+                    
+                    this.props.handleLogin(loggedIn);
+                 
             
         })
             .catch(err =>{
-                console.log(err.response.data);
+                // console.log(err.response.data);
+                if(!this.state.loggedIn)
+                {
                 alert("Username or Password doesn't Match!");
+
+                
+                }
                 // window.location.reload(true);
                 });
         //alert("Login")
@@ -114,22 +130,28 @@ class UserSignInComponent extends Component {
                                     <h2 className="text-center" style={{ marginTop:"15px" }}>Sign In</h2>
                                 }
                                 <div className = "card-body">
-                                    <form onSubmit={this.handleFormSubmit}>
+                                    <form onSubmit={this.validateSignIn}>
                                         
                                         <div className = "form-group">
                                             <label> Email Id: </label>
                                             <input placeholder="Email Address" name="emailId" type="email" className="form-control" 
-                                                value={this.state.emailId} onChange={this.changeEmailHandler}/>
+                                            required
+                                                value={this.state.emailId} onChange={this.changeEmailHandler} 
+                                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                                />
                                         </div>
                                         
                                         <div className = "form-group">
                                             <label> Password: </label>
                                             <input placeholder="Password" name="password" type="password"  className="form-control" 
-                                                value={this.state.password} onChange={this.changePasswordHandler}/>
+                                            required
+                                                value={this.state.password} onChange={this.changePasswordHandler}
+                                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                                />
                                         </div>
                                         <br></br>
 
-                                        <button className="btn btn-success btn-block" type="submit" onClick={this.validateSignIn}>Sign In</button>
+                                        <button className="btn btn-success btn-block" type="submit" >Sign In</button>
                                         
                                     </form>
                                 </div>
