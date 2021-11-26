@@ -132,7 +132,7 @@ class UserSignInComponent extends Component {
                                         </div>
                                         <br></br>
 
-                                        <button className="btn btn-success btn-block" type="submit" onClick={this.validateSignIn}>Sign In</button>
+                                        <button className="btn btn-success btn-block" type="submit" >Sign In</button>
                                         
                                     </form>
                                 </div>
