@@ -18,7 +18,12 @@ public class ByPassTest {
 
         WebElement email_field = driver.findElement(By.name("emailId"));
 
-        String typeValue = email_field.getAttribute("type");
+//        String typeValue = email_field.getAttribute("type");
+        js.executeScript
+                ("document.getElementsByName('emailId')[0].setAttribute('type', 'text')");
+        js.executeScript
+                ("document.getElementsByName('emailId')[0].setAttribute('pattern', '(.*?)')");
+
         //Entering text into the email field
         email_field.sendKeys("nihar@gmail.com");
         Thread.sleep(3000);
