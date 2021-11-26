@@ -119,31 +119,34 @@ class  UserRegisterComponent extends Component {
                                     this.getTitle()
                                 }
                                 <div className = "card-body">
-                                    <form>
+                                    <form onSubmit={this.saveOrUpdateUser}>
                                         <div className = "form-group">
                                             <label> First Name: </label>
-                                            <input placeholder="First Name" name="firstName" className="form-control" 
-                                                value={this.state.firstName} onChange={this.changeFirstNameHandler}/>
+                                            <input placeholder="First Name" name="firstName" className="form-control" pattern="[A-Za-z]+"
+                                                value={this.state.firstName} onChange={this.changeFirstNameHandler} required/>
                                         </div>
                                         <div className = "form-group">
                                             <label> Last Name: </label>
-                                            <input placeholder="Last Name" name="lastName" className="form-control" 
-                                                value={this.state.lastName} onChange={this.changeLastNameHandler}/>
+                                            <input placeholder="Last Name" name="lastName" className="form-control" pattern="[A-Za-z]+"
+                                                value={this.state.lastName} onChange={this.changeLastNameHandler} required/>
                                         </div>
                                         <div className = "form-group">
                                             <label> Email Id: </label>
-                                            <input placeholder="Email Address" name="emailId" type="email" className="form-control" 
-                                                value={this.state.emailId} onChange={this.changeEmailHandler}/>
+                                            <input placeholder="Email Address" name="emailId" type="email" className="form-control"
+                                                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                                value={this.state.emailId} onChange={this.changeEmailHandler} required/>
                                         </div>
                                         <div className = "form-group">
                                             <label> Contact Number: </label>
-                                            <input placeholder="Contact Number" name="contactNumber" className="form-control" 
-                                                value={this.state.contactNumber} onChange={this.changeContactNumberHandler}/>
+                                            <input placeholder="Contact Number" name="contactNumber" className="form-control"
+                                                   minLength={10} maxLength={10}
+                                                value={this.state.contactNumber} onChange={this.changeContactNumberHandler} required/>
                                         </div>
                                         <div className = "form-group">
                                             <label> Password: </label>
                                             <input placeholder="Password" name="password" type="password"  className="form-control" minLength={8}
-                                                value={this.state.password} onChange={this.changePasswordHandler}/>
+                                                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                                   value={this.state.password} onChange={this.changePasswordHandler} required/>
                                         </div>
 
                                         
@@ -158,7 +161,7 @@ class  UserRegisterComponent extends Component {
                     
                                         </select>
                                         </div>
-                                        <button className="btn btn-success" type="submit" onClick={this.saveOrUpdateUser}>Register</button>
+                                        <button className="btn btn-success" type="submit">Register</button>
                                         <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Cancel</button>
                                     </form>
                                 </div>
