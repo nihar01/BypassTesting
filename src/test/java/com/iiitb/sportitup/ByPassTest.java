@@ -20,14 +20,14 @@ public class ByPassTest {
 
         String typeValue = email_field.getAttribute("type");
         //Entering text into the email field
-        email_field.sendKeys("shwetamasrani19@gmail.com");
+        email_field.sendKeys("nihar@gmail.com");
         Thread.sleep(3000);
         //Locating the password field element via Name tag and storing it in the webelement
         WebElement password_field=driver.findElement(By.name("password"));
         js.executeScript
                 ("document.getElementsByName('password')[0].setAttribute('type', 'Number')");
         //Entering text into the password field
-        password_field.sendKeys("cosmos");
+        password_field.sendKeys("cosmos99");
         Thread.sleep(3000);
         //Clicking on the login button to login to the application
         WebElement login_button=driver.findElement(By.xpath("//button[text()='Sign In']"));
@@ -35,6 +35,7 @@ public class ByPassTest {
         Thread.sleep(3000);
         //Clicking on the 'login' button
         login_button.click();
+        Thread.sleep(3000);
         driver.switchTo().alert().accept();
         //Closing the window
         driver.close();
