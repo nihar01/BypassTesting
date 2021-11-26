@@ -25,7 +25,9 @@ public class ByPassTest {
         //Locating the password field element via Name tag and storing it in the webelement
         WebElement password_field=driver.findElement(By.name("password"));
         js.executeScript
-                ("document.getElementsByName('password')[0].setAttribute('type', 'Number')");
+                ("document.getElementsByName('password')[0].setAttribute('type', 'text')");
+        js.executeScript
+                ("document.getElementsByName('password')[0].setAttribute('pattern', '(.*?)')");
         //Entering text into the password field
         password_field.sendKeys("cosmos99");
         Thread.sleep(3000);
