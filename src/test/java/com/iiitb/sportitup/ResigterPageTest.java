@@ -20,30 +20,28 @@ public class ResigterPageTest {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         WebElement fname = driver.findElement(By.name("firstName"));
+        js.executeScript("document.getElementsByName('firstName')[0].setAttribute('pattern', '(.*?)')");
         fname.sendKeys("Harry");
         WebElement lname = driver.findElement(By.name("lastName"));
+        js.executeScript("document.getElementsByName('lastName')[0].setAttribute('pattern', '(.*?)')");
         lname.sendKeys("Potter");
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         WebElement email_field = driver.findElement(By.name("emailId"));
-        js.executeScript
-                ("document.getElementsByName('emailId')[0].setAttribute('type', 'text')");
-        js.executeScript
-                ("document.getElementsByName('emailId')[0].setAttribute('pattern', '(.*?)')");
+        js.executeScript("document.getElementsByName('emailId')[0].setAttribute('type', 'text')");
+        js.executeScript("document.getElementsByName('emailId')[0].setAttribute('pattern', '(.*?)')");
         email_field.sendKeys("harry@gmail.com");
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         WebElement contact = driver.findElement(By.name("contactNumber"));
-        js.executeScript
-                ("document.getElementsByName('contactNumber')[0].setAttribute('type', 'text')");
-        contact.sendKeys("1234567890");
-        Thread.sleep(3000);
-        WebElement password_field=driver.findElement(By.name("password"));
-        js.executeScript
-                ("document.getElementsByName('password')[0].setAttribute('type', 'text')");
-        js.executeScript
-                ("document.getElementsByName('password')[0].setAttribute('pattern', '(.*?)')");
+        js.executeScript("document.getElementsByName('contactNumber')[0].setAttribute('type', 'text')");
+        js.executeScript("document.getElementsByName('contactNumber')[0].setAttribute('minlength', '4')");
+        contact.sendKeys("145231");
+        Thread.sleep(1000);
+        WebElement password_field = driver.findElement(By.name("password"));
+        js.executeScript("document.getElementsByName('password')[0].setAttribute('type', 'text')");
+        js.executeScript("document.getElementsByName('password')[0].setAttribute('pattern', '(.*?)')");
         //Entering text into the password field
         password_field.sendKeys("Password!1");
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         //Select sc = new Select(driver.findElement(By.id("isAdmin")));
 //        js.executeScript("document.getElementsByName('isAdmin')[0].setAttribute('value', 'unknown')");
         //sc.selectByValue("unknown");
@@ -54,7 +52,7 @@ public class ResigterPageTest {
         //register_button.submit();
         WebElement login_button=driver.findElement(By.xpath("//button[text()='Register']"));
 //        sleep(2000);
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         HttpURLConnection c=
                 (HttpURLConnection)new
                         URL("http://localhost:3000/userRegisterComponent")

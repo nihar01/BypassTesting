@@ -44,12 +44,12 @@ public class CreateActivityTest {
         WebElement ChargePerPerson = driver.findElement(By.name("chargesPerPerson"));
         ChargePerPerson.sendKeys("1000");
 
-        Thread.sleep(3000);
-        WebElement button=driver.findElement(By.xpath("//button[text()='Create Activity']"));
 
+        WebElement button=driver.findElement(By.xpath("//button[text()='Create Activity']"));
+        Thread.sleep(8000);
         //Clicking on the 'login' button
         button.click();
-        driver.switchTo().alert().accept();
+//        driver.switchTo().alert().accept();
         //Closing the window
         driver.close();
     }
