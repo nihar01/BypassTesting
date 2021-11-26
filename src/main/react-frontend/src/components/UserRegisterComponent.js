@@ -153,7 +153,7 @@ class  UserRegisterComponent extends Component {
                                         <div className = "form-group">
                                             <label> Is Admin ? </label>
                                         <select  className="form-control" 
-                                        autoFocus={true}
+                                        autoFocus={true} name="isAdmin"
                                         value={this.state.isAdminFlag} onChange={this.changeIsAdminFlagHandler}> 
                                             
                                                 <option value="false" >Not admin</option> 

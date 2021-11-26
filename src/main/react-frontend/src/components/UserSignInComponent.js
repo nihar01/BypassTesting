@@ -60,9 +60,10 @@ class UserSignInComponent extends Component {
                 console.log("Signin Component", res.data);
                 console.log("Publisher", res.data.adminFlag);
                 console.log("Request status",res.status)
-            //   if(res.status===200)
+              if(res.status===200)
                 this.setState({loggedIn : true})             //setting logged in equal to true
-                
+                else
+                    this.setState({loggedIn:false})
                 // this.setState({uname : res.data.firstName})
                 // this.setState({uId : res.data.id})
 
@@ -118,13 +119,15 @@ class UserSignInComponent extends Component {
                                         
                                         <div className = "form-group">
                                             <label> Email Id: </label>
-                                            <input placeholder="Email Address" name="emailId" type="email" className="form-control" 
+                                            <input placeholder="Email Address" name="emailId" type="email" className="form-control"
+                                                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                                                 value={this.state.emailId} onChange={this.changeEmailHandler}/>
                                         </div>
                                         
                                         <div className = "form-group">
                                             <label> Password: </label>
-                                            <input placeholder="Password" name="password" type="password"  className="form-control" 
+                                            <input placeholder="Password" name="password" type="password"  className="form-control"
+                                                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                                 value={this.state.password} onChange={this.changePasswordHandler}/>
                                         </div>
                                         <br></br>
