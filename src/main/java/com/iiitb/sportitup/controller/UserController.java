@@ -42,10 +42,10 @@ public class UserController {
         String regex_email = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+(?:\\.[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$";
         String regex_lastName="[A-Za-z]+";
         String regex_contactNumber="^\\d{10}$";
-        String regex_password="\"^(?=.*[0-9])\"\n" +
-                "                + \"(?=.*[a-z])(?=.*[A-Z])\"\n" +
-                "                + \"(?=.*[@#$%^&+=])\"\n" +
-                "                + \"(?=\\\\S+$).{8,20}$\"";
+        String regex_password ="^(?=.*[0-9])"
+                + "(?=.*[a-z])(?=.*[A-Z])"
+                + "(?=.*[@#$%^&+=!])"
+                + "(?=\\S+$).{8,20}$";
 
         Pattern pattern_firstName= Pattern.compile(regex_firstName);
         Matcher matcher_firstName= pattern_firstName.matcher(user.getFirstName());
