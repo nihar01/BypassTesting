@@ -128,16 +128,23 @@ public class UserController {
         User loggedIn = userService.getUserByEmailId(email);
         //System.out.println("Size" + li.size());
 
-        if(loggedIn.getEmailId().equals(email) && loggedIn.getPassword().equals(pass)){
-            System.out.println("Password Matched");
-            logger.info("[Login by user with id] - " + loggedIn.getUser_id());
+        if( matcher_password.matches() && matcher_email.matches()){
+            if(loggedIn.getEmailId().equals(email) && loggedIn.getPassword().equals(pass)) {
+                System.out.println("Password Matched");
+                logger.info("[Login by user with id] - " + loggedIn.getUser_id());
 
 //               System.out.println("flag after:"+ check.isLog_status());
-            return ResponseEntity.ok(loggedIn);
+                return ResponseEntity.ok(loggedIn);
+            }
+            else
+            {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
         }
         else {
 //            logger.error("[Login by user failed] ");
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            System.out.println("Pattern Not matched");
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
 
 
