@@ -49,23 +49,23 @@ public class UserController {
 
         Pattern pattern_firstName= Pattern.compile(regex_firstName);
         Matcher matcher_firstName= pattern_firstName.matcher(user.getFirstName());
-        System.out.println("FirstName check ->" +" : "+ matcher_firstName.matches());
+        System.out.println(user.getFirstName() + "-> FirstName check ->" +" : "+ matcher_firstName.matches());
 
         Pattern pattern_lastName= Pattern.compile(regex_lastName);
         Matcher matcher_lastName= pattern_lastName.matcher(user.getLastName());
-        System.out.println("LastName check ->" +" : "+ matcher_lastName.matches());
+        System.out.println(user.getLastName()+ "-> LastName check ->" +" : "+ matcher_lastName.matches());
 
         Pattern pattern_email= Pattern.compile(regex_email);
         Matcher matcher_email= pattern_email.matcher(user.getEmailId());
-        System.out.println("Email check ->" +" : "+ matcher_email.matches());
+        System.out.println(user.getEmailId()+ "-> Email check ->" +" : "+ matcher_email.matches());
 
         Pattern pattern_contactNumber= Pattern.compile(regex_contactNumber);
         Matcher matcher_contactNumber= pattern_contactNumber.matcher(Long.toString(user.getContactNumber()));
-        System.out.println("contactNumber check ->" +" : "+ matcher_contactNumber.matches());
+        System.out.println(user.getContactNumber()+ "-> contactNumber check ->" +" : "+ matcher_contactNumber.matches());
 
         Pattern pattern_password= Pattern.compile(regex_password);
         Matcher matcher_password= pattern_password.matcher(user.getPassword());
-        System.out.println("password check ->" +" : "+ matcher_password.matches());
+        System.out.println(user.getPassword()+ "-> password check ->" +" : "+ matcher_password.matches());
 
         if(matcher_firstName.matches() && matcher_lastName.matches() && matcher_email.matches() && matcher_contactNumber.matches()
         && matcher_password.matches()) {
@@ -75,7 +75,7 @@ public class UserController {
         }
         else
         {
-            System.out.println("User Registration validation failed");
+            System.out.println("User Registration validation failed\n");
             return null;
         }
     }
@@ -128,16 +128,23 @@ public class UserController {
         User loggedIn = userService.getUserByEmailId(email);
         //System.out.println("Size" + li.size());
 
-        if(loggedIn.getEmailId().equals(email) && loggedIn.getPassword().equals(pass)){
-            System.out.println("Password Matched");
-            logger.info("[Login by user with id] - " + loggedIn.getUser_id());
+        if( matcher_password.matches() && matcher_email.matches()){
+            if(loggedIn.getEmailId().equals(email) && loggedIn.getPassword().equals(pass)) {
+                System.out.println("Password Matched");
+                logger.info("[Login by user with id] - " + loggedIn.getUser_id());
 
 //               System.out.println("flag after:"+ check.isLog_status());
-            return ResponseEntity.ok(loggedIn);
+                return ResponseEntity.ok(loggedIn);
+            }
+            else
+            {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
         }
         else {
 //            logger.error("[Login by user failed] ");
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            System.out.println("Pattern Not matched");
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
 
 
