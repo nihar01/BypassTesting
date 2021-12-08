@@ -138,8 +138,8 @@ class  UserRegisterComponent extends Component {
                                         </div>
                                         <div className = "form-group">
                                             <label> Contact Number: </label>
-                                            <input placeholder="Contact Number" name="contactNumber" className="form-control"
-                                                   minLength={10} maxLength={10}
+                                            <input type="text" placeholder="Contact Number" name="contactNumber" className="form-control"
+                                                   pattern="[0-9]+" minLength="10" maxLength="10"
                                                 value={this.state.contactNumber} onChange={this.changeContactNumberHandler} required/>
                                         </div>
                                         <div className = "form-group">
@@ -149,7 +149,6 @@ class  UserRegisterComponent extends Component {
                                                    value={this.state.password} onChange={this.changePasswordHandler} required/>
                                         </div>
 
-                                        
                                         <div className = "form-group">
                                             <label> Is Admin ? </label>
                                         <select  className="form-control" 

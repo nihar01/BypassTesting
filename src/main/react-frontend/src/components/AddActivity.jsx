@@ -117,7 +117,7 @@ class AddActivity extends Component {
                                     this.getTitle()
                                 }
                                 <div className = "card-body" >
-                                    <form >
+                                    <form onSubmit={this.handleSubmit}>
                                         <div className = "form-group" style={{borderRadius:"25px"}}>
                                             <label> Sport Name: </label>
                                             <input 
@@ -125,7 +125,7 @@ class AddActivity extends Component {
                                             name="sportName" className="form-control" 
                                             style={{borderRadius:"15px"}}
                                             value={this.state.sportName} 
-                                            onChange={this.handleChange}/>
+                                            onChange={this.handleChange} required/>
 
                                         </div>
                                         <div className = "form-group">
@@ -138,7 +138,7 @@ class AddActivity extends Component {
                                            
                                             className="form-control" 
                                             value={this.state.activityDate} 
-                                            onChange={this.handleChange} style={{borderRadius:"25px"}}/>
+                                            onChange={this.handleChange} style={{borderRadius:"25px"}} required/>
                                         </div>
 
                                         {/* <DatePicker 
@@ -158,13 +158,13 @@ class AddActivity extends Component {
                                             className="form-control" 
                                             value={this.state.activityTime} 
                                             onChange={this.handleChange} 
-                                            style={{borderRadius:"25px"}}/>
+                                            style={{borderRadius:"25px"}} required/>
                                         </div>
 
                                         <div>
                             <label> Venue: </label>
                             <select class="form-control"  name="venue_id" value={this.state.venue_id}  
-                            style={{borderRadius:"25px"}} onChange={this.handleChange}>
+                            style={{borderRadius:"25px"}} onChange={this.handleChange} required>
                             
                             <option value=""> -- Select a Venue -- </option>
                                {this.state.venueData.map((data) => (
@@ -184,7 +184,7 @@ class AddActivity extends Component {
                                             type="number"
                                             value={this.state.numberOfPlayers} 
                                             onChange={this.handleChange} 
-                                            style={{borderRadius:"25px"}}/>
+                                            style={{borderRadius:"25px"}} required/>
                                         </div>
 
                                         <div className = "form-group">
@@ -196,11 +196,11 @@ class AddActivity extends Component {
                                             name="chargesPerPerson"
                                             value={this.state.chargesPerPerson} 
                                             onChange={this.handleChange} 
-                                            style={{borderRadius:"25px"}}/>
+                                            style={{borderRadius:"25px"}} required/>
                                         </div>
                                    
 
-                                        <button className="btn btn-success" type="submit" onClick={this.handleSubmit}>Create Activity</button>
+                                        <button className="btn btn-success" type="submit">Create Activity</button>
                                         <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Cancel</button>
                                     </form>
                                 </div>
